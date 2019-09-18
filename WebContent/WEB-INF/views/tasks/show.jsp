@@ -12,17 +12,17 @@
                     <tbody>
                         <tr>
                             <th>作成日時</th>
-                            <td><fmt:formatDate value="${message.created_at}"
+                            <td><fmt:formatDate value="${tasks.created_at}"
                                     pattern="yyyy-MM-dd HH:mm:ss" /></td>
                         </tr>
                         <tr>
                             <th>更新日時</th>
-                            <td><fmt:formatDate value="${message.updated_at}"
+                            <td><fmt:formatDate value="${tasks.updated_at}"
                                     pattern="yyyy-MM-dd HH:mm:ss" /></td>
                         </tr>
                         <tr>
                             <th>タスク</th>
-                            <td><c:out value="${message.content}" /></td>
+                            <td><c:out value="${tasks.content}" /></td>
                         </tr>
 
                     </tbody>

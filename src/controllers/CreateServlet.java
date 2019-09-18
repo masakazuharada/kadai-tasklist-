@@ -54,7 +54,7 @@ public class CreateServlet extends HttpServlet {
 
                 // フォームに初期値を設定、さらにエラーメッセージを送る
                 request.setAttribute("_token", request.getSession().getId());
-                request.setAttribute("message", m);
+                request.setAttribute("tasks", m);
                 request.setAttribute("errors", errors);
 
                 RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/views/tasks/new.jsp");
@@ -71,13 +71,13 @@ public class CreateServlet extends HttpServlet {
                 response.sendRedirect(request.getContextPath() + "/index");
             }
 
-            em.getTransaction().begin();
-            em.persist(m);
-            em.getTransaction().commit();
-            request.getSession().setAttribute("flush", "登録が完了しました。");
-            em.close();
+//            em.getTransaction().begin();
+//            em.persist(m);
+//            em.getTransaction().commit();
+//           request.getSession().setAttribute("flush", "登録が完了しました。");
+//            em.close();
 
-            response.sendRedirect(request.getContextPath() + "/index");
+//            response.sendRedirect(request.getContextPath() + "/index");
         }
     }
 
